@@ -1,0 +1,36 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{assets/signature}[2018/05/15 Signature Page]
+
+\newcommand*{\makesignature}{
+    \thispagestyle{empty}  
+    \vspace*{55mm}
+    \centerline{\heiti\zihao{-2}{\@title}}
+    \vspace{55mm}
+    \begin{minipage}[b]{0.55\linewidth}
+    \end{minipage}
+    \hfill
+    \begin{minipage}[b]{0.45\linewidth}
+    \begin{tabular}{rc}
+    \specialrule{0em}{8pt}{8pt}
+    完成日期：& \uline{\makebox[30mm]{}}\\
+    	\specialrule{0em}{8pt}{8pt}
+    指导教师签字：& \uline{\makebox[30mm]{}}\\
+    	\specialrule{0em}{8pt}{8pt}
+    答辩小组成员签字：& \uline{\makebox[30mm]{}} \\
+	\specialrule{0em}{8pt}{8pt}
+	& \uline{\makebox[30mm]{}} \\
+	\specialrule{0em}{8pt}{8pt}
+	& \uline{\makebox[30mm]{}} \\
+	\specialrule{0em}{8pt}{8pt}
+	& \uline{\makebox[30mm]{}} \\
+	\specialrule{0em}{8pt}{8pt}
+	& \uline{\makebox[30mm]{}} \\
+	\specialrule{0em}{8pt}{8pt}
+	& \uline{\makebox[30mm]{}} \\
+	\specialrule{0em}{8pt}{8pt}
+	& \uline{\makebox[30mm]{}} \\
+	\specialrule{0em}{8pt}{8pt}
+    \end{tabular}
+    \end{minipage}
+    \newpage
+}

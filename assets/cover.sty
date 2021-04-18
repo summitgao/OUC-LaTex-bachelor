@@ -1,0 +1,36 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{assets/cover}[2015/05/20 Cover Page]
+
+%% Require title, author, studentid, advisor, college, department. 
+
+\newcommand*{\makecover}{
+  \begin{titlepage}
+    \begin{minipage}{100mm}
+      \songti{\zihao{-5}{
+          分类号\uline{\makebox[41mm]{ }} 密级\uline{\makebox[41mm]{ }}  \\
+          UDC\uline{\hfill  \hfill}
+      }}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{25mm}
+      \includegraphics[width=1.5in]{assets/logo}
+    \end{minipage}
+    \vspace{20mm}\\
+    \centerline{\songti\zihao{-0}{本\ 科\ 毕\ 业\ 论\ 文（设\ 计）}}
+
+
+    \vspace{15mm}
+    \centerline{\heiti\zihao{1}{\@title}}
+
+
+    \vspace{25mm}
+    \begin{center}
+      \heiti\zihao{3}{学生姓名}\uline{\makebox[30mm]{\songti{\@author}}}\heiti\zihao{3}{学号}\uline{\makebox[50mm]{\@studentid}}\par
+      \heiti\zihao{3}{指导教师}\uline{\makebox[92mm]{\songti{\@advisor}}}\par
+      \heiti\zihao{3}{院、系、中心}\uline{\makebox[80mm]{\songti{\@college}}}\par
+      \heiti\zihao{3}{专业年级}\uline{\makebox[92mm]{\songti{\@department}}}\par
+      \vspace{35mm}
+      \kaishu\zihao{-3}{中国海洋大学}
+    \end{center}
+  \end{titlepage}
+}
