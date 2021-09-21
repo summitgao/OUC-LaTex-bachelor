@@ -10,7 +10,7 @@
 
 **本模板在 Overleaf 下测试通过，本地编译尚未测试。** 可以通过链接：https://cn.overleaf.com/read/ymrxysrnchhm   在线浏览本项目。
 
-![](https://gaopursuit.oss-cn-beijing.aliyuncs.com/2021/files/20210422170337.jpg)
+![](./20210422170337.jpg)
 
 
 Overleaf 是一个线上 LaTeX 编辑器，可以在不安装任何工具的情况下编写 LaTeX 文档，同时也可以和其他人共享文档，共同编辑。
