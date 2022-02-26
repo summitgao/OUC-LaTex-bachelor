@@ -1,7 +1,7 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesPackage{assets/cover}[2015/05/20 Cover Page]
 
-%% Require title, author, studentid, advisor, college, department.
+%% Require title, author, studentid, advisor, college, department, grade.
 
 \newcommand*{\makecover}{
   \begin{titlepage}
@@ -28,7 +28,7 @@
       \zihao{3}{\bf{\heiti 学生姓名}}\uline{\makebox[30mm]{\songti{\@author}}}\zihao{3}{\bf{\heiti 学号}}\uline{\makebox[50mm]{\@studentid}}\par
       \zihao{3}{\bf{\heiti 指导教师}}\uline{\makebox[92mm]{\songti{\@advisor}}}\par
       \zihao{3}{\bf{\heiti 院、系、中心}}\uline{\makebox[80mm]{\songti{\@college}}}\par
-      \zihao{3}{\bf{\heiti 专业年级}}\uline{\makebox[92mm]{\songti{\@department}}}\par
+      \zihao{3}{\bf{\heiti 专业年级}}\uline{\makebox[92mm]{\songti{\@department}{\@grade}{级}}}\par
       \zihao{4}{\bf{\heiti 论文答辩日期}}\uline{\makebox[17.5mm]{}\zihao{4}{\bf{\heiti 年}}\makebox[17.5mm]{}\zihao{4}{\bf{\heiti 月}}\makebox[17.5mm]{}\zihao{4}{\bf{\heiti 日}}\makebox[17.5mm]{}}\par
       \vspace{15mm}
       \zihao{-2}{\bf{\kaishu 中\ 国\ 海\ 洋\ 大\ 学}}

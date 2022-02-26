@@ -1,0 +1,9 @@
+.vscode/
+
+main.*
+!main.tex
+
+mainor.*
+!mainor.tex
+
+*.log

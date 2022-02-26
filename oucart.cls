@@ -25,6 +25,7 @@
 \RequirePackage{fancyhdr}
 \pagestyle{fancy}
 
+\RequirePackage{assets/coveror}
 \RequirePackage{assets/cover}
 \RequirePackage{assets/abstractkeywords}
 \RequirePackage{assets/signature}
@@ -34,7 +35,7 @@
 \renewcommand{\refname}{\centerline{参考文献}}
 
 % 调整页边距
-\geometry{top=2.54cm,bottom=2.54cm,left=3cm,right=3cm} 
+\geometry{top=2.54cm,bottom=2.54cm,left=3cm,right=3cm}
 
 \makeatletter
 
@@ -54,6 +55,9 @@
 \newcommand*{\department}[2]{
   \def\@college{#1}
   \def\@department{#2}
+}
+\newcommand*{\grade}[1]{
+  \def\@grade{#1}
 }
 
 \lhead{}
@@ -123,5 +127,5 @@
 \renewcommand\thefigure{\arabic{section}-\arabic{figure}}
 \renewcommand\thetable{\arabic{section}-\arabic{table}}
 \renewcommand{\labelenumi}{(\theenumi)}
-\renewcommand{\captionfont}{\zihao{5}\heiti} 
+\renewcommand{\captionfont}{\zihao{5}\heiti}
 \numberwithin{equation}{section}
