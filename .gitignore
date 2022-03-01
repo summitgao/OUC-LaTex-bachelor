@@ -1,4 +1,5 @@
 .vscode/
+.idea/
 
 main.*
 !main.tex
@@ -7,3 +8,4 @@ mainor.*
 !mainor.tex
 
 *.log
+*.pdf
