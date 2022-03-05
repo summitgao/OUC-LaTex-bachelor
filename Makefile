@@ -7,4 +7,4 @@ build_mainor:
 	xelatex -file-line-error -interaction=nonstopmode -synctex=1 -output-directory=out/openingreport/ openingreport.tex
 
 clean:
-	rm -rf *.pdf *.log ./out/*
+	rm -rf *.pdf ./out/* *.log  *.aux *.synctex.gz *.toc
