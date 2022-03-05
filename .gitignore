@@ -1,11 +1,13 @@
 .vscode/
 .idea/
 
+out/
+
 main.*
 !main.tex
 
-mainor.*
-!mainor.tex
+openingreport.*
+!openingreport.tex
 
 *.log
 *.pdf
