@@ -1,10 +1,8 @@
 build_main:
-	mkdir "out/main"
-	xelatex -file-line-error -interaction=nonstopmode -synctex=1 -output-directory=out/main/ main.tex
+	xelatex -file-line-error -interaction=nonstopmode -synctex=1 main.tex
 
 build_mainor:
-	mkdir "out/openingreport"
-	xelatex -file-line-error -interaction=nonstopmode -synctex=1 -output-directory=out/openingreport/ openingreport.tex
+	xelatex -file-line-error -interaction=nonstopmode -synctex=1 openingreport.tex
 
 clean:
-	rm -rf *.pdf ./out/* *.log  *.aux *.synctex.gz *.toc
+	rm -rf *.pdf *.log  *.aux *.synctex.gz *.toc

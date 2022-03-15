@@ -8,5 +8,8 @@ main.*
 openingreport.*
 !openingreport.tex
 
-*.log
 *.pdf
+*.log
+*.aux
+*.synctex.gz
+*.toc

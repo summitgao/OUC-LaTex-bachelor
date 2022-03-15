@@ -43,20 +43,20 @@
 \def\@cite#1#2{\textsuperscript{[{#1\if@tempswa , #2\fi}]}}
 
 % 定义基本信息
-\newcommand*{\entitle}[1]{
+\newcommand{\entitle}[1]{
     \def\@entitle{#1}
 }
-\newcommand*{\advisor}[1]{
+\newcommand{\advisor}[1]{
     \def\@advisor{#1}
 }
-\newcommand*{\studentid}[1]{
+\newcommand{\studentid}[1]{
     \def\@studentid{#1}
 }
-\newcommand*{\department}[2]{
+\newcommand{\department}[2]{
     \def\@college{#1}
     \def\@department{#2}
 }
-\newcommand*{\grade}[1]{
+\newcommand{\grade}[1]{
     \def\@grade{#1}
 }
 
@@ -85,26 +85,26 @@
 {\zihao{4}\songti}
 {\contentslabel{1em}}
 {}
-{\titlerule*{.}\contentspage}
+{\titlerule{.}\contentspage}
 \titlecontents{subsection}
 [17mm]
 {\zihao{-4}\songti}
 {\contentslabel{2em}}
 {}
-{\titlerule*{.}\contentspage}
+{\titlerule{.}\contentspage}
 \titlecontents{subsubsection}
 [25mm]
 {\zihao{-4}\songti}
 {\contentslabel{3em}}
 {}
-{\titlerule*{.}\contentspage}
+{\titlerule{.}\contentspage}
 % 为了把致谢和参考文献放入目录
 \titlecontents{nonumbersection}
 [4.6mm]
 {\zihao{-4}\songti}
 {\contentslabel{0em}}
 {}
-{\titlerule*{.}\contentspage}
+{\titlerule{.}\contentspage}
 
 % 修改部分页眉样式
 \fancypagestyle{zhabstract}{
