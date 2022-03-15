@@ -1,0 +1,24 @@
+{
+	"editor.unicodeHighlight.ambiguousCharacters":false,
+	"latex-workshop.latex.tools": [
+		{
+			"name": "xelatex",
+			"command": "xelatex",
+			"args": [
+				"-synctex=1",
+				"-interaction=nonstopmode",
+				"%DOC%"
+			],
+			"env": {}
+		}
+	],
+	"latex-workshop.latex.recipes": [
+		{
+			"name": "xelatex 🔃",
+			"tools": [
+				"xelatex"
+			]
+		}
+	],
+	"latex-workshop.latex.autoBuild.run": "never"
+}

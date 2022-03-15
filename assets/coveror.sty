@@ -1,0 +1,35 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{assets/coveror}[2015/05/20 Cover Page]
+
+%% Require title, author, studentid, advisor, college, department, grade.
+
+\newcommand{\makecoveror}{
+    \begin{titlepage}
+        \vspace{20mm}
+        \vspace{20mm}
+        \centerline{\heiti\zihao{1}{中国海洋大学}}
+        \vspace{5mm}
+        \centerline{\heiti\zihao{1}{本\ 科\ 毕\ 业\ 论\ 文（设\ 计）}}
+
+        \vspace{30mm}
+        \centerline{\heiti\zihao{0}{开题报告}}
+
+        \vspace{50mm}
+        \begin{center}
+            \zihao{-3}\makebox[25mm][s]{\textbf{\songti 题目}}{\uline{\makebox[102mm]{\songti{\@title}}}}\par
+            \zihao{-3}\makebox[25mm][s]{\textbf{\songti 院、系}}{\uline{\makebox[102mm]{\songti{\@college}}}}\par
+            \zihao{-3}\makebox[25mm][s]{\textbf{\songti 专业}}{\uline{\makebox[67mm]{\songti{\@department}}}}\zihao{-3}\makebox[15mm]{\textbf{\songti (年级)}}{\uline{\makebox[20mm]{\songti{\@grade}}}}\par
+            \zihao{-3}\makebox[25mm][s]{\textbf{\songti 学生姓名}}{\uline{\makebox[102mm]{\songti{\@author}}}}\par
+            \zihao{-3}\makebox[25mm][s]{\textbf{\songti 学号}}{\uline{\makebox[102mm]{\songti{\@studentid}}}}\par
+            \zihao{-3}\makebox[25mm][s]{\textbf{\songti 指导教师}}{\uline{\makebox[102mm]{\songti{\@advisor}}}}\par
+        \end{center}
+
+        \vspace{15mm}
+
+        \begin{flushright}
+            \zihao{-3}{\textbf{\kaishu 教务处制表}{\makebox[35mm]{}}}\par
+            \makebox[10mm]{}\zihao{-3}{\textbf{\kaishu 年}{\makebox[10mm]{}}}\zihao{-3}{\textbf{\kaishu 月}{\makebox[10mm]{}}}\zihao{-3}{\textbf{\kaishu 日}{\makebox[30mm]{}}}\par
+        \end{flushright}
+
+    \end{titlepage}
+}

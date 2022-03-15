@@ -1,0 +1,15 @@
+.idea/
+
+out/
+
+main.*
+!main.tex
+
+openingreport.*
+!openingreport.tex
+
+*.pdf
+*.log
+*.aux
+*.synctex.gz
+*.toc

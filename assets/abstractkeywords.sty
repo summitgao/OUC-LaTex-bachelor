@@ -5,44 +5,46 @@
 
 \RequirePackage{abstract}
 
-\newcommand*{\cnabstractkeywords}[2]{
-  \def\@cnabstract{#1}
-  \def\@cnkeywords{#2}
+\newcommand{\cnabstractkeywords}[2]{
+    \def\@cnabstract{#1}
+    \def\@cnkeywords{#2}
 }
 
-\newcommand*{\enabstractkeywords}[2]{
-  \def\@enabstract{#1}
-  \def\@enkeywords{#2}
+\newcommand{\enabstractkeywords}[2]{
+    \def\@enabstract{#1}
+    \def\@enkeywords{#2}
 }
 
-\newcommand*{\makeabstract}{
-  \thispagestyle{zhabstract}
-  \newpage
-  \pagenumbering{Roman}
-  \begin{center}
-      \zihao{-3}{\heiti{\@title}}
-  \end{center}
-  \ifdefined\@cnabstract{
-    \renewcommand\abstractname{\zihao{-3}{\heiti{摘\ \ \ 要}}}
-    \begin{abstract}
-      \zihao{-4}{\songti{\@cnabstract}}\par
-      \zihao{-4}{\heiti{\noindent \textbf{\\ 关键词：\@cnkeywords}}}
-    \end{abstract}
-    \vspace{5mm}
+\newcommand{\makeabstract}{
     \newpage
-  }
-  \fi
-  \ifdefined\@enabstract{
-    \thispagestyle{enabstract}
-    \begin{center}
-        \zihao{-3}{\heiti{\textbf{\@entitle}}}
-    \end{center}
-    \renewcommand\abstractname{\zihao{-3}{\heiti{Abstract}}}
-    \begin{abstract}
-      \zihao{-4}{\songti{\noindent \@enabstract}}\par
-      \zihao{-4}{\heiti{\noindent \textbf{\\ Keywords:\@enkeywords}}}
-    \end{abstract}
-  }
-  \fi
-  \newpage
+    \pagenumbering{Roman}
+    \ifdefined\@cnabstract{
+        \addcontentsline{toc}{nonumbersection}{摘要}
+        \thispagestyle{zhabstract}
+        \begin{center}
+            \zihao{-3}{\heiti{\@title}}
+        \end{center}
+        \renewcommand\abstractname{\zihao{-3}{\heiti{摘\ \ \ 要}}}
+        \begin{abstract}
+            \zihao{-4}{\songti{\@cnabstract}}\par
+            \zihao{-4}{\heiti{\noindent \textbf{\\ 关键词：\@cnkeywords}}}
+        \end{abstract}
+        \vspace{5mm}
+        \newpage
+    }
+    \fi
+    \ifdefined\@enabstract{
+        \addcontentsline{toc}{nonumbersection}{Abstract}
+        \thispagestyle{enabstract}
+        \begin{center}
+            \zihao{-3}{\heiti{\textbf{\@entitle}}}
+        \end{center}
+        \renewcommand\abstractname{\zihao{-3}{\heiti{Abstract}}}
+        \begin{abstract}
+            \zihao{-4}{\songti{\noindent \@enabstract}}\par
+            \zihao{-4}{\heiti{\noindent \textbf{\\ Keywords:\@enkeywords}}}
+        \end{abstract}
+    }
+    \fi
+    \newpage
 }
