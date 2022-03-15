@@ -71,14 +71,17 @@
 {\zihao{2}\heiti\raggedright}
 {\arabic{section}.}{1em}
 {}
+
 \titleformat{\subsection}
 {\zihao{3}\heiti\raggedright}
 {\arabic{section}.\arabic{subsection}}{1em}
 {}
+
 \titleformat{\subsubsection}
 {\zihao{4}\heiti\raggedright}
 {\arabic{section}.\arabic{subsection}.\arabic{subsubsection}}{1em}
 {}
+
 % 修改目录样式
 \titlecontents{section}
 [10mm]
@@ -86,18 +89,21 @@
 {\contentslabel{1em}}
 {}
 {\titlerule{.}\contentspage}
+
 \titlecontents{subsection}
 [17mm]
 {\zihao{-4}\songti}
 {\contentslabel{2em}}
 {}
 {\titlerule{.}\contentspage}
+
 \titlecontents{subsubsection}
 [25mm]
 {\zihao{-4}\songti}
 {\contentslabel{3em}}
 {}
 {\titlerule{.}\contentspage}
+
 % 为了把致谢和参考文献放入目录
 \titlecontents{nonumbersection}
 [4.6mm]

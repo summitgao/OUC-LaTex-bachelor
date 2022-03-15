@@ -16,13 +16,14 @@
 }
 
 \newcommand{\makeabstract}{
-    \thispagestyle{zhabstract}
     \newpage
     \pagenumbering{Roman}
-    \begin{center}
-        \zihao{-3}{\heiti{\@title}}
-    \end{center}
     \ifdefined\@cnabstract{
+        \addcontentsline{toc}{nonumbersection}{摘要}
+        \thispagestyle{zhabstract}
+        \begin{center}
+            \zihao{-3}{\heiti{\@title}}
+        \end{center}
         \renewcommand\abstractname{\zihao{-3}{\heiti{摘\ \ \ 要}}}
         \begin{abstract}
             \zihao{-4}{\songti{\@cnabstract}}\par
@@ -33,6 +34,7 @@
     }
     \fi
     \ifdefined\@enabstract{
+        \addcontentsline{toc}{nonumbersection}{Abstract}
         \thispagestyle{enabstract}
         \begin{center}
             \zihao{-3}{\heiti{\textbf{\@entitle}}}
