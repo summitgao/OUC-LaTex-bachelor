@@ -44,15 +44,11 @@ https://mirrors.tuna.tsinghua.edu.cn/CTAN/systems/texlive/Images/
 
 安装过程花费半小时属于正常现象，耐心等待即可。
 
-<br>
-
 #### Tex Live自带编辑器TeXworks
 
 使用自带编辑器TeXworks时，左上角更改为**XeLaTeX**即可使用。但是自带编辑器功能简陋，年久失修，一般建议使用其他编辑器。
 
 ![image-20220305144537228](README.assets/image-20220305144537228.png)
-
-<br>
 
 #### VS Code + LateX Workshop
 
@@ -61,8 +57,6 @@ https://mirrors.tuna.tsinghua.edu.cn/CTAN/systems/texlive/Images/
 本项目已经自带.vscode/setting.json配置文件，所以可以直接构建，点击左侧TEX中的build或者右上角的绿色构建按钮都可。如果希望VSCode默认使用XeLaTeX，而不局限于本项目，请将.vscode/setting.json中的内容添加到你的VSCode本身的setting中，这样就不需要每个工作区重新配置XeLaTeX了。
 
 ![VSCode + LaTeX Workshop](README.assets/image-20220305143913352.png)
-
-<br>
 
 #### IntelliJ IDEA + TeXiFy IDEA
 
@@ -73,15 +67,23 @@ https://mirrors.tuna.tsinghua.edu.cn/CTAN/systems/texlive/Images/
 
 ![IntelliJ IDEA + TeXiFy IDEA + PDF Viewer](README.assets/image-20220305144343929.png)
 
-<br>
-
 #### TeXstudio
 
 TeXstudio上述均是全平台的，此编辑器仅限Windows平台。需要将**选项->设置TeXstudio->构建->默认编译器**改为XeLaTeX。
 
 ![TeXstudio](README.assets/image-20220305143708631.png)
 
-<br>
+#### 文本编辑器
+
+如果使用系统自带文本编辑器的话，需要在命令行中编译PDF。
+
+```shell
+xelatex -file-line-error -interaction=nonstopmode -synctex=1 main.tex
+```
+
+## 注意事项
+
+可能需要编译两次才可以正确显示目录
 
 ## 开源许可
 
