@@ -1,8 +1,10 @@
-## 简介
+## 简介 
 
 本模板是中国海洋大学本科生毕业论文LaTeX模板。LaTeX是一个流行的编辑科学类文章的工具。 大多数科学类书籍，期刊，文章都采用了LaTeX。 使用这个模板可以使你从无聊的格式限制中解脱出来，从而更专注地阐述自己的想法。 希望本模板能够帮助你入门LaTeX, 如果你有关于本模板的良好意见和建议，请在顶栏的问题(issue)一栏中提出。
 
-学习LaTeX语法可以参照[The Not So Short Introduction To LaTeX2ε (Chinese Edition)](https://github.com/CTeX-org/lshort-zh-cn)，下载其最新的PDF版Release或者clone项目到本地构建PDF。
+学习LaTeX可以参考 Overleaf 的官方教程（[Learn LaTeX in 30 minutes](https://cn.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes)），或者在B站学习碗豆老师的45分钟教学视频 “[Latex科研写作入门](https://www.bilibili.com/video/BV1Au411N7Ew/)”。
+
+本模板已经帮助2017级以来的多届中国海洋大学本科毕业生使用，在学生及答辩专家中反馈良好，大家可以放心使用。
 
 有任何问题可以联系： gaofeng@ouc.edu.cn
 
@@ -14,7 +16,7 @@
 
 **本模板在 Overleaf 下测试通过。** 可以通过链接：<https://cn.overleaf.com/read/ymrxysrnchhm>   在线浏览本项目。
 
-![Overleaf](./20210422170337.jpg)
+![img](img/20210422170337.jpg)
 
 Overleaf 是一个线上 LaTeX 编辑器，可以在不安装任何工具的情况下编写 LaTeX 文档，同时也可以和其他人共享文档，共同编辑。
 
@@ -48,7 +50,7 @@ https://mirrors.tuna.tsinghua.edu.cn/CTAN/systems/texlive/Images/
 
 使用自带编辑器TeXworks时，左上角更改为**XeLaTeX**即可使用。但是自带编辑器功能简陋，年久失修，一般建议使用其他编辑器。
 
-![image-20220305144537228](README.assets/image-20220305144537228.png)
+![img](img/image-20220305144537228.jpg)
 
 #### VS Code + LateX Workshop
 
@@ -56,7 +58,7 @@ https://mirrors.tuna.tsinghua.edu.cn/CTAN/systems/texlive/Images/
 
 本项目已经自带.vscode/setting.json配置文件，所以可以直接构建，点击左侧TEX中的build或者右上角的绿色构建按钮都可。如果希望VSCode默认使用XeLaTeX，而不局限于本项目，请将.vscode/setting.json中的内容添加到你的VSCode本身的setting中，这样就不需要每个工作区重新配置XeLaTeX了。
 
-![VSCode + LaTeX Workshop](README.assets/image-20220305143913352.png)
+![img](img/image-20220305143913352.jpg)
 
 #### IntelliJ IDEA + TeXiFy IDEA
 
@@ -65,13 +67,13 @@ https://mirrors.tuna.tsinghua.edu.cn/CTAN/systems/texlive/Images/
 编译需要先找到tex文件中的**\\begin\{document\}**，点击其左侧的运行按钮，第一次会运行失败，然后编辑上方的**配置**，将编译器改为**XeLaTeX**即可。
 或者直接**"文件->新项目设置->运行配置模板->LaTeX->编译器"**改为**XeLaTeX**，这样新项目默认都是使用XeLaTeX。
 
-![IntelliJ IDEA + TeXiFy IDEA + PDF Viewer](README.assets/image-20220305144343929.png)
+![img](img/image-20220305144343929.jpg)
 
 #### TeXstudio
 
 TeXstudio上述均是全平台的，此编辑器仅限Windows平台。需要将**选项->设置TeXstudio->构建->默认编译器**改为XeLaTeX。
 
-![TeXstudio](README.assets/image-20220305143708631.png)
+![img](img/image-20220305143708631.jpg)
 
 #### 文本编辑器
 
