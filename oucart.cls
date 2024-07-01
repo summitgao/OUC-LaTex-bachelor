@@ -55,7 +55,11 @@
   \def\@college{#1}
   \def\@department{#2}
 }
-
+\newcommand*{\Date}[3]{
+  \def\@Year{#1}
+  \def\@Month{#2}
+  \def\@Day{#3}
+}
 \lhead{}
 \rhead{}
 \chead{\small{\@title}} % 页眉
