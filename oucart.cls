@@ -55,6 +55,9 @@
   \def\@college{#1}
   \def\@department{#2}
 }
+\newcommand*{\grade}[1]{
+  \def\@grade{#1}
+}
 
 \lhead{}
 \rhead{}
