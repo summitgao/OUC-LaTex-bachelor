@@ -1,7 +1,48 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesPackage{assets/coveror}[2015/05/20 Cover Page]
+\RequirePackage{setspace}
 
 %% Require title, author, studentid, advisor, college, department, grade.
+
+\makeatletter
+% A command to typeset the title line(s) with an underline of fixed width (102 mm).
+\newcommand{\flexTitle}{%
+
+  % 1) Measure the width of \@title in your desired font and store it in \mytitlewidth
+  \newlength{\mytitlewidth}%
+  \settowidth{\mytitlewidth}{\songti \@title}%
+  
+  % 2) Compare \mytitlewidth with 102 mm
+  \ifdim \mytitlewidth > 102mm
+    % --- MULTI-LINE (title too long) ---
+    
+    % Place label and an underline of fixed length (102 mm):
+    \zihao{-3}
+    \makebox[25mm][s]{\textbf{\songti 题目}}%
+    {\uline{\makebox[102mm]{}}}%  % <-- empty box of width 102 mm, underlined
+    % \par
+    
+    % Move upward by 1 line, so that the bottom line of the next block
+    % will sit exactly where the single-line baseline would have been.
+    \vspace{-1.03\baselineskip}%
+    
+    % Typeset the actual title in a box of exactly 102 mm wide, bottom-aligned.
+    % This lets line-wrapping occur automatically within 102 mm.
+    \hspace{30mm}\parbox[b]{100mm}{%
+      \setstretch{0.9}
+      \zihao{-3}
+      \songti
+      \@title
+    }
+    
+  \else
+    % --- SINGLE LINE (title fits in 102 mm) ---
+    \zihao{-3}
+    \makebox[25mm][s]{\textbf{\songti 题目}}%
+    {\uline{\makebox[102mm]{\songti \@title}}}%
+    \par
+  \fi
+}
 
 \newcommand{\makecoveror}{
     \begin{titlepage}
@@ -16,7 +57,7 @@
 
         \vspace{50mm}
         \begin{center}
-            \zihao{-3}\makebox[25mm][s]{\textbf{\songti 题目}}{\uline{\makebox[102mm]{\songti{\@title}}}}\par
+            \flexTitle
             \zihao{-3}\makebox[25mm][s]{\textbf{\songti 院、系}}{\uline{\makebox[102mm]{\songti{\@college}}}}\par
             \zihao{-3}\makebox[25mm][s]{\textbf{\songti 专业}}{\uline{\makebox[67mm]{\songti{\@department}}}}\zihao{-3}\makebox[15mm]{\textbf{\songti (年级)}}{\uline{\makebox[20mm]{\songti{\@grade}}}}\par
             \zihao{-3}\makebox[25mm][s]{\textbf{\songti 学生姓名}}{\uline{\makebox[102mm]{\songti{\@author}}}}\par
